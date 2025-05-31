@@ -1,14 +1,73 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Risk Profile App
 
-# Getting Started
+Risk Profile App is a React Native application designed to help users determine their risk profile by answering a series of questions. The app calculates a score based on the user's answers and categorizes their risk level as **Low**, **Medium**, or **High**.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 🚀 Features
 
-## Step 1: Start Metro
+- **Welcome Screen**: Introduces the app and allows users to start the quiz.
+- **Questionnaire Screen**: Displays a series of questions with multiple-choice answers.
+- **Result Screen**: Shows the user's calculated score and risk category, with options to retake the quiz or return to the home screen.
+- **Dynamic Questionnaire**: Presents users with multiple questions and choices.
+- **Real-time Scoring**: Calculates total score and determines risk category (Low, Medium, High).
+- **State Management**: Uses Zustand for lightweight and scalable state handling.
+- **Smooth Navigation**: Seamless transitions between screens using React Navigation.
+- **Error Handling**: Alerts users if questions are left unanswered.
+- **Retake Option**: Allows users to retake the quiz or return to the welcome screen.
+- **Theming**: Consistent UI with a custom theme.
+- **Testing**: Includes Jest and React Testing Library tests for components and logic.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 🛠 Technology Stack
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- React Native + TypeScript
+- Zustand (state management)
+- React Navigation (routing)
+- Jest & React Testing Library (testing)
+
+## Getting Started
+
+Follow the steps below to set up and run the app on your local machine.
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- **Node.js**: [Download Node.js](https://nodejs.org/)
+- **React Native CLI**: Install globally using `npm install -g react-native-cli`
+- **Android Studio** (for Android development) or **Xcode** (for iOS development)
+- **CocoaPods** (for iOS dependencies): Install using `sudo gem install cocoapods`
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/AdibaAbid/RiskProfileApp.git
+   cd RiskProfileApp
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   # Using npm
+   npm install
+
+   # OR using Yarn
+   yarn install
+   ```
+
+3. For iOS, install CocoaPods dependencies:
+
+   ```sh
+   cd ios
+   pod install
+   cd ..
+   ```
+
+### Running the App
+
+#### Start Metro
+
+Metro is the JavaScript bundler for React Native. Start Metro by running:
 
 ```sh
 # Using npm
@@ -18,11 +77,9 @@ npm start
 yarn start
 ```
 
-## Step 2: Build and run your app
+#### Run on Android
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
+Ensure you have an Android emulator running or a physical device connected.
 
 ```sh
 # Using npm
@@ -32,23 +89,9 @@ npm run android
 yarn android
 ```
 
-### iOS
+#### Run on iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+Ensure you have Xcode installed and an iOS simulator running.
 
 ```sh
 # Using npm
@@ -58,40 +101,94 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+### Testing
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+This project uses **Jest** for unit testing. Run the tests using:
 
-## Step 3: Modify your app
+```sh
+# Run all tests
+yarn test
 
-Now that you have successfully run the app, let's make changes!
+# Run tests in watch mode
+yarn run test:watch
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+# Run tests with coverage
+yarn run test:coverage
+```
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+### Code Coverage
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+The project aims for **80% code coverage**. You can view the coverage report by running:
 
-## Congratulations! :tada:
+```sh
+npm run test:coverage
+```
 
-You've successfully run and modified your React Native App. :partying_face:
+The coverage report will be generated in the `coverage` directory.
 
-### Now what?
+### Project Structure
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+```
+/src
+  /components
+    - QuestionCard.tsx
+  /screens
+    - WelcomeScreen.tsx
+    - QuestionnaireScreen.tsx
+    - ResultScreen.tsx
+  /navigation
+    - AppNavigator.tsx
+  /store
+    - quizStore.ts
+  /theme
+    - index.ts
+  /data
+    - questions.ts (sample data)
+App.tsx
 
-# Troubleshooting
+```
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+### Key Technologies
 
-# Learn More
+- **React Native**: Framework for building cross-platform mobile apps.
+- **Zustand**: Lightweight state management library.
+- **Jest**: Testing framework for unit tests.
+- **@react-navigation/native**: Navigation library for React Native.
 
-To learn more about React Native, take a look at the following resources:
+## 🧪 Running the App
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+1️⃣ Install dependencies:
+
+```
+yarn install
+
+```
+
+2️⃣ Run on iOS/Android:
+
+```
+yarn run-ios
+yarn run-android
+
+
+```
+
+## 🧪 Running Tests
+
+```
+yarn test
+
+```
+
+Troubleshooting
+
+If you encounter issues, try the following:
+
+- Ensure all dependencies are installed (`npm install` or `yarn install`).
+- For iOS, ensure CocoaPods dependencies are installed (`pod install`).
+- Restart Metro (`npm start` or `yarn start`).
+- Check the [React Native Troubleshooting Guide](https://reactnative.dev/docs/troubleshooting).
+
+## 📖 License
+
+This project is licensed for demo purposes.
