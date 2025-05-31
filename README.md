@@ -126,6 +126,13 @@ npm run test:coverage
 
 The coverage report will be generated in the `coverage` directory.
 
+## 🧪 Running Tests
+
+```
+yarn test
+
+```
+
 ### Project Structure
 
 ```
@@ -155,32 +162,8 @@ App.tsx
 - **Jest**: Testing framework for unit tests.
 - **@react-navigation/native**: Navigation library for React Native.
 
-## 🧪 Running the App
 
-1️⃣ Install dependencies:
-
-```
-yarn install
-
-```
-
-2️⃣ Run on iOS/Android:
-
-```
-yarn run-ios
-yarn run-android
-
-
-```
-
-## 🧪 Running Tests
-
-```
-yarn test
-
-```
-
-Troubleshooting
+## Troubleshooting
 
 If you encounter issues, try the following:
 
