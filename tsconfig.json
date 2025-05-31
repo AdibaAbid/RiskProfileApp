@@ -1,3 +1,9 @@
 {
+  "compilerOptions": {
+    "types": ["react-native", "jest"], // Add "jest"
+    "jsx": "react-jsx", // Or "react"
+    "esModuleInterop": true, // Good to have
+    "allowSyntheticDefaultImports": true // Good to have
+  },
   "extends": "@react-native/typescript-config/tsconfig.json"
 }
