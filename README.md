@@ -23,6 +23,17 @@ Risk Profile App is a React Native application designed to help users determine 
 - React Navigation (routing)
 - Jest & React Testing Library (testing)
 
+## 💡 Why Zustand?
+
+Zustand is a perfect choice for managing the quiz state in this app because:
+
+- Lightweight and simple, with minimal boilerplate.
+- Efficient state updates, ensuring smooth scoring and navigation.
+- Easy to test and mock in unit tests.
+- React Native friendly, with no unnecessary re-renders.
+
+
+
 ## Getting Started
 
 Follow the steps below to set up and run the app on your local machine.
